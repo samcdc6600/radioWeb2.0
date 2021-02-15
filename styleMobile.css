@@ -1,0 +1,213 @@
+body
+{
+    /* height: calc(100vh - 18px - 18px); */
+    /* max-height: calc(100vh - 18px - 18px - 18px - 18px); */
+    margin: 0px;
+    padding: 0px;
+    /* min-height: calc(400px + 60px + 18px + 18px + 18px); */
+    /* Button width + (2 * padding) */
+    min-width: calc(420px + 18px + 18px);
+    background-color:  #ffe6e6;
+    /* background: url("185958.jpg"); */
+}
+
+/* ========================================================================== */
+/* =================================  Misc  ================================= */
+/* ========================================================================== */
+header
+{
+    height: 60px;
+}
+
+h1
+{
+    margin: 18px;
+    font-size: 3.2em;
+}
+
+h3
+{
+    color: #002725;
+}
+
+a
+{
+    color: #002725;
+    font-size: 2.2em;
+}
+
+hr
+{
+    height: 4px;
+    border: none;
+    background-color: #0ef3e6;
+    opacity: 0.65;
+    padding: none;
+    margin: none;
+}
+
+.scrollStyle
+{
+    scrollbar-color: rgba(14, 243, 230, 0.65) rgba(255, 252, 232, 0.65);
+    overflow: auto;
+}
+
+.horizontalList
+{
+    display: flex;
+}
+
+.horizontalList li
+{
+    list-style-type: none;
+    margin-right: 60px;
+}
+
+
+/* ========================================================================== */
+/* ==========================  Main Layout Control  ========================= */
+/* ========================================================================== */
+#container
+{
+    display: flex;
+    flex-direction: column;
+    /* width: calc(100vh - 18px); */
+    /* height: calc(100vh - 96px); */
+    /* margin: 18px; */
+    margin-top: 0px;
+}
+
+.column.b
+{
+    order: 2;
+}
+
+.column.a
+{
+    order: 1;
+}
+
+/* ========================================================================== */
+/* =========================  Bottom of Page (Menu.)  ======================= */
+/* ========================================================================== */
+#menu
+{
+    padding: 18px;
+    background: #ffe6e6;
+    min-height: 220px;
+    /* Half of page - (2 * padding). */
+    height: calc(50vh - 18px - 18px);
+    /* Min-width should be button width + 2 * padding. */
+    min-width: clac(420px + 18px + 18px);
+    /* margin-top: 18px; */
+}
+
+#menuBottomSection
+{
+    margin-top: 18px;
+}
+
+.menuUl
+{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    list-style-type: none;
+    list-style: none;
+    font-size: 2.2em;
+}
+
+.menuLink
+{
+    color: #002725;
+    font-size: 1.2em;
+}
+
+#scheduleSection
+{
+    /* 304 makes the end of the element end at the same point as the menu
+       element. Then we minus the menu padding. */
+    /* height: 100%; */
+    min-height: calc(50px);
+    /* 50% of page + padding + heading + padding +  */
+    height: calc(50vh - 18px - 62px - 18px - 102px - 20px);
+    color: #002725;
+}
+
+#menuSchedule
+{
+    margin-top: 0px;
+    font-size: 3.2em;
+    margin-bottom: 18px;
+}
+
+/* ========================================================================== */
+/* ====================  Top of Page (Play Button Area.)  =================== */
+/* ========================================================================== */
+main
+{
+    padding: 18px; 
+    background: #ffe6e6;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Min-width should be button width + 2 * padding. */
+    min-width: clac(420px + 18px + 18px);
+    min-height: 220px;
+    /* Half of page - (2 * padding). */
+    height: calc(50vh - 18px - 18px);
+}
+
+.mainRadio
+{
+    background-image: url("./background.jpeg");
+}
+
+#buttonSpacer
+{
+    min-height: calc(130px - 130px);
+    /* Height should be 100% of the element - button height. */
+    height: calc(100% - 130px);
+}
+
+button
+{   /* Approximation of Golden ratio for button (with width doubled ;) */
+    height: 130px;
+    width: 420px;
+    border: thick outset #ffe6e6;
+    background: #ffe6e6;
+}
+
+.buttonText
+{
+    padding-left: 9px;
+    color: #002725;
+        /* Text spacing */
+    letter-spacing: 0.6em;
+    font-size: 3.6em;
+}
+
+#mainArticle
+{
+    padding: 16px;
+    padding-bottom: 16px;
+    background: rgba(255, 230, 230, 0.55);
+    /* Should have min-height of main - (2 * padding) */
+    min-height: calc(175px - 18px - 18px);
+    height: calc(50vh - 18px - 18px - 18px - 18px);
+}
+
+#mainArticleProper
+{
+        /* Should have min-height of main - (2 * padding) */
+    min-height: calc(175px - 18px - 18px - 39px - 18px);
+    /* 50% of page - (4 * padding) - (heading height) - (heading padding) */
+    max-height: calc(50vh - 18px - 18px - 18px - 18px - 62px - 18px);
+}
+
+#articleHeading
+{
+    margin-top: 0px;
+    margin-left: 0px;
+    padding-top: 0px;
+    padding-left: 0px;
+}
