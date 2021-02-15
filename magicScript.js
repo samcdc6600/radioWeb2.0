@@ -9,12 +9,15 @@ var playing = false;
 document.onreadystatechange = function()
 {
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent))
-    { // We are on a mobile device.
-	if(location.pathname.indexOf("M.html") == -1)
-	{   // "M.html" wasn't in the path name.
-	    // Replace ".html" in the path name with "M.html" and load page at path.
-	    window.location.replace(location.pathname.substring(0, location.pathname.lastIndexOf("/") + 1) + location.pathname.substring(location.pathname.lastIndexOf("/") + 1, location.pathname.lastIndexOf(".html")) + "M.html");
-	}
+    { // We are on a mobile device. We will load an alternative CSS file.
+	// HeadCount contains the string in-between the head tags.
+	let headContent = document.head.innerHTML;
+	let strIndex1 = headContent.lastIndexOf("<!-- Start Link Magic(#@!56^) -->");
+	let strIndex2 = headContent.lastIndexOf("<!-- End Link Magic(#@!56^) -->");
+	// Replace the string in-between the start of the start link comment and the start of the end link comment with the second argument below.
+	headContent = headContent.replace(headContent.substring(strIndex1, strIndex2), "<link rel=\"stylesheet\" type=\"text/css\" href=\"styleMobile.css\" id=\"mobileStyleSheet\">");
+	// Replace head.innerHTML with the headContent string.
+	document.head.innerHTML = headContent;
     }
 }
 
