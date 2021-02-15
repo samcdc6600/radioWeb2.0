@@ -1,12 +1,5 @@
-var audio = new Audio('https://cast-1.nucleusstreaming.com:4443/pbsfm_live_64.aacp');
-var playing = false;
-
-
-// document.onload = function script()
-// {
-//     console.log("body loaded");
-// }
-document.onreadystatechange = function()
+// document.onreadystatechange
+loadFunction  = function()
 {
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent))
     { // We are on a mobile device. We will load an alternative CSS file.
@@ -22,37 +15,13 @@ document.onreadystatechange = function()
 }
 
 
-window.addEventListener("load", function(){
-    console.log("body loaded");
+// Run loadFunction() (this is run when the parser encounteres the script tag in the head tag in the html file and runs this scrilpt.)
+loadFunction();
 
-    // image is already loaded
-    if(document.querySelector("#mainBackground").complete) {
-	console.log("complete");
-	// var image_width_actual = document.querySelector("#mainBackground").naturalWidth;
-	// var image_height_actual = document.querySelector("#mainBackground").naturalHeight;
 
-	// var image_width_rendered = document.querySelector("#mainBackground").width;
-	// var image_height_rendered = document.querySelector("#mainBackground").height;
-	// console.log("image loaded");
-    }
-    else {
-	document.querySelector("#mainBackground").addEventListener('load', function() {
-	    console.log("loaded");
-	    // var image_width_actual = this.naturalWidth;
-	    // var image_height_actual = this.naturalHeight;
-
-	    // var image_width_rendered = this.width;
-	    // var image_height_rendered = this.height;
-	    // console.log("image now loaded");
-	});
-	console.log("not loaded");
-    }
-
-    // if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent))
-    // { // Take the user to a different screen here.
-    // 	window.location.replace("http://www.w3schools.com");
-    // }
-});
+// Vars for audio functionality.
+var audio = new Audio('https://cast-1.nucleusstreaming.com:4443/pbsfm_live_64.aacp');
+var playing = false;
 
 
 function playButtonClicked()
