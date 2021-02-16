@@ -2,7 +2,7 @@
 <head>
   <meta charset="utf-8">
   <title>RADIO LISTEN</title>
-  <!-- Start Link Magic(#@!56^) --><link rel='stylesheet' type='text/css' href='style.css' id="desktopStyleSheet"><!-- End Link Magic(#@!56^) -->
+  <!-- Start Link Magic(#@!56^) --><link rel='stylesheet' type='text/css' href='style.css'><!-- End Link Magic(#@!56^) -->
   <script src="magicScript.js" async=""></script>
 </head>
 
@@ -14,16 +14,15 @@
   </header>
   
   <div id="container">  
-    <div class="column l" id="menu">
-      <div id="menuMinHeight">
-	<ul class="menuUl" id="menuTopSection">
+    <div class="section a" id="menu">
+	<ul class="menuUl horizontalList" id="mainMenu">
 	  <li><a href="about.html" class="menuLink">ABOUT</a></li>
 	  <li><a href="archive.html" class="menuLink">ARCHIVE</a></li>
 	</ul>
 	<hr>
 	<section>
-	  <h3>SCHEDULE</h3>
-	  <ul class="scroll_style menuUl" id="scheduleSection">
+	  <h3 id="menuSchedule">SCHEDULE</h3>
+	  <ul class="menuUl" id="scheduleSection">
 	    <li>
 	      12-2 BIG TIME SHOW W/ JOHN CITIZEN
 	    </li>
@@ -44,10 +43,9 @@
 	    </li>
 	  </ul>
 	</section>
-      </div>
     </div>
     
-    <main class="column r mainRadio" id="mainBackground">
+    <main class="section b mainRadio" id="mainBackground">
       <div id="buttonSpacer"></div>
       <button class="button" id="playStreamButton" onclick="playButtonClicked()">
 	<div class="buttonText" id="buttonTextColorId">PLAY</div>

@@ -16,13 +16,15 @@ body
 /* ========================================================================== */
 header
 {
-    height: 60px;
+    display: none;
 }
 
 h1
 {
     margin: 18px;
     font-size: 3.2em;
+    hidden: "true";
+    display: none;
 }
 
 h3
@@ -71,18 +73,15 @@ hr
 {
     display: flex;
     flex-direction: column;
-    /* width: calc(100vh - 18px); */
-    /* height: calc(100vh - 96px); */
-    /* margin: 18px; */
     margin-top: 0px;
 }
 
-.column.b
+.section.a
 {
     order: 2;
 }
 
-.column.a
+.section.b
 {
     order: 1;
 }
@@ -96,15 +95,23 @@ hr
     background: #ffe6e6;
     min-height: 220px;
     /* Half of page - (2 * padding). */
-    height: calc(50vh - 18px - 18px);
+    /* height: calc(50vh - 18px - 18px); */
     /* Min-width should be button width + 2 * padding. */
-    min-width: clac(420px + 18px + 18px);
+    min-width: calc(420px + 18px + 18px);
     /* margin-top: 18px; */
+    background: blue;
+            overflow: auto;
 }
 
-#menuBottomSection
+#menuMinHeight
 {
-    margin-top: 18px;
+     /* overflow: hidden; */
+    box-sizing: border-box; 
+}
+
+#mainMenu
+{
+    margin-bottom: 18px;
 }
 
 .menuUl
@@ -136,8 +143,8 @@ hr
 
 #menuSchedule
 {
-    margin-top: 0px;
     font-size: 3.2em;
+    margin-top: 18px;
     margin-bottom: 18px;
 }
 
@@ -186,28 +193,28 @@ button
     font-size: 3.6em;
 }
 
-#mainArticle
-{
-    padding: 16px;
-    padding-bottom: 16px;
-    background: rgba(255, 230, 230, 0.55);
-    /* Should have min-height of main - (2 * padding) */
-    min-height: calc(175px - 18px - 18px);
-    height: calc(50vh - 18px - 18px - 18px - 18px);
-}
+/* #mainArticle */
+/* { */
+/*     padding: 16px; */
+/*     padding-bottom: 16px; */
+/*     background: rgba(255, 230, 230, 0.55); */
+/*     /\* Should have min-height of main - (2 * padding) *\/ */
+/*     min-height: calc(175px - 18px - 18px); */
+/*     height: calc(50vh - 18px - 18px - 18px - 18px); */
+/* } */
 
-#mainArticleProper
-{
-        /* Should have min-height of main - (2 * padding) */
-    min-height: calc(175px - 18px - 18px - 39px - 18px);
-    /* 50% of page - (4 * padding) - (heading height) - (heading padding) */
-    max-height: calc(50vh - 18px - 18px - 18px - 18px - 62px - 18px);
-}
+/* #mainArticleProper */
+/* { */
+/*         /\* Should have min-height of main - (2 * padding) *\/ */
+/*     min-height: calc(175px - 18px - 18px - 39px - 18px); */
+/*     /\* 50% of page - (4 * padding) - (heading height) - (heading padding) *\/ */
+/*     max-height: calc(50vh - 18px - 18px - 18px - 18px - 62px - 18px); */
+/* } */
 
-#articleHeading
-{
-    margin-top: 0px;
-    margin-left: 0px;
-    padding-top: 0px;
-    padding-left: 0px;
-}
+/* #articleHeading */
+/* { */
+/*     margin-top: 0px; */
+/*     margin-left: 0px; */
+/*     padding-top: 0px; */
+/*     padding-left: 0px; */
+/* } */
